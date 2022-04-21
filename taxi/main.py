@@ -5,6 +5,9 @@ from pdb import set_trace as stop
 import numpy as np
 from tqdm import tqdm
 
+import gym
+from q_agent import QAgent
+
 
 def train(
     agent,
@@ -98,6 +101,9 @@ def evaluate(
 
             next_state, reward, done, info = env.step(action)
 
+            if i == (n_episodes-1):
+                print(env.render(mode='ansi'))
+
             frames.append({
                 'frame': env.render(mode='ansi'),
                 'state': state,
@@ -143,22 +149,19 @@ def train_many_runs(
 
     return timesteps, penalties
 
-if __name__ == '__main__':
 
-    import gym
-    from src.q_agent import QAgent
 
-    env = gym.make("Taxi-v3").env
-    alpha = 0.1
-    gamma = 0.6
-    agent = QAgent(env, alpha, gamma)
+env = gym.make("Taxi-v3").env
+alpha = 0.1
+gamma = 0.6
+agent = QAgent(env, alpha, gamma)
 
-    agent, _, _ = train(
-        agent, env, n_episodes=10000, epsilon=0.10)
+agent, _, _ = train(
+    agent, env, n_episodes=10000, epsilon=0.10)
 
-    timesteps_per_episode, penalties_per_episode, _ = evaluate(
-        agent, env, n_episodes=100, epsilon=0.05
-    )
+timesteps_per_episode, penalties_per_episode, _ = evaluate(
+    agent, env, n_episodes=100, epsilon=0.05
+)
 
-    print(f'Avg steps to complete ride: {np.array(timesteps_per_episode).mean()}')
-    print(f'Avg penalties to complete ride: {np.array(penalties_per_episode).mean()}')
+print(f'Avg steps to complete ride: {np.array(timesteps_per_episode).mean()}')
+print(f'Avg penalties to complete ride: {np.array(penalties_per_episode).mean()}')

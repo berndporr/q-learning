@@ -39,12 +39,12 @@ eine solche Agentin (hier eine Maus) bewegt. Abb.~\ref{state_action}A
 zeigt den Zustandsraum. In diesem Beispiel ist der Zustandsraum 2D, in
 dem sich die Agentin bewegen kann. Manche Zustände sind durch Wände
 verboten und bei anderen gibt es eine Belohnung (also ``Käse''
-gekennzeichnet).  Zustände werden mit $s$ gekennzeichet und wenn sie
+gekennzeichnet).  Zustände werden mit $s$ gekennzeichnet und wenn sie
 zum Zeitpunkt $t$ passieren, dann wird das als $s_t$
-gekennzeichet. Jeder Zustand besitzt auch eine skalare
-Belohungsvariable $r$, die positiv ist, wenn es eine Belohnung gibt
-und negativ, wenn der Zustand bestraft werden soll. Fuer alle anderen
-Zustaende ist $r=0$.
+gekennzeichnet. Jeder Zustand besitzt auch eine skalare
+Belohnungsvariable $r$, die positiv ist, wenn es eine Belohnung gibt
+und negativ, wenn der Zustand bestraft werden soll. F\"ur alle anderen
+Zustände ist $r=0$.
 
 Abb.~\ref{state_action}B zeigt die möglichen Aktionen $a$, die die
 Agentin durchführen kann. Eine Aktion bewirkt eine Bewegung von einem
@@ -63,17 +63,17 @@ Belohnung $r$.
 \end{center}
 \caption{Lernschritte von Q-learning. A) Die Agentin befindet
   sich direkt auf der Belohnung. Das führt dazu, dass alle
-  Q-Werte gleichermassen erhöht werden, z.B. auf $0.5$ mit
+  Q-Werte gleichermaßen erhöht werden, z.B. auf $0.5$ mit
   einer Lernrate von $\alpha = 0.5$.
 \label{learning_steps}}
 \end{figure}
 
 Die Frage stellt sich nun, wie die Agentin von jeder beliebigen Stelle
 $s$ die Belohnungen findet. Das wird erreicht, indem jede Aktion $a$
-bezueglich eines Zustandes $s$ eine Hilfsvariable erhaelt, die wir
+bezüglich eines Zustandes $s$ eine Hilfsvariable erh\"alt, die wir
 $Q(s,a)$ nennen (siehe Abb.~\ref{learning_steps}A). In diesem
-Beispiel erhaelt jeder Zustand $s$ vier Q-Werte (Nord, West, Ost
-und S\"ud). Anfaenglich sind alle Q-Werte null.
+Beispiel erh\"alt jeder Zustand $s$ vier Q-Werte (Nord, West, Ost
+und S\"ud). Anfänglich sind alle Q-Werte null.
 
 Die Q-Werte werden nun mit Hilfe der iterativen Bellman-Formel bestimmt:
 \begin{equation}
@@ -81,18 +81,18 @@ Die Q-Werte werden nun mit Hilfe der iterativen Bellman-Formel bestimmt:
   \label{bellit}
 \end{equation}
 wo $\alpha$ die Lernrate ist und $0 < \gamma < 1$ der ``discount
-Factor'' der zukünftige Belohnungen abwertet. Fuer die Beispiele hier
+Factor'' der zukünftige Belohnungen abwertet. F\"ur die Beispiele hier
 nehmen wir einfach an, dass $\alpha = 0.5$ und $\gamma = 1$ ist.
 
 Die Q-Werte werden nun iterativ gelernt, wobei die Agentin
 Zufallsaktionen $a$ durchführt und dann $Q(s,a)$ aktualisiert wird.
 Am Anfang sind all Q-Werte null. Nur die direkte Belohnung kann diesen
-von Null erhoehen, was in Abb.~\ref{learning_steps}A gezeigt wird. Bei
-einer Lernrate von $\alpha = 0.5$ ergibt das dann fuer alle Aktionen
+von Null erhöhen, was in Abb.~\ref{learning_steps}A gezeigt wird. Bei
+einer Lernrate von $\alpha = 0.5$ ergibt das dann f\"ur alle Aktionen
 einen Q-Wert von $0.5$.
 
-Der entscheidende Trick ist aber nun, wenn bei der naechsten
-Zufallswanderung die simulierte Maus einen Schritt vor der primaeren
+Der entscheidende Trick ist aber nun, wenn bei der n\"achsten
+Zufallswanderung die simulierte Maus einen Schritt vor der prim\"aren
 Belohnung steht. Nun ist $Q(s,a)$ nicht mehr überall
 null. Abb.~\ref{learning_steps}B zeigt nun die Agentin einen Schritt
 vor der Belohnung. $Q(s,a)$ ist der Q-Wert \textsl{nach} der Aktion
@@ -106,10 +106,10 @@ Grunde wird der Term $\delta(s,a)$ auch Vorhersagefehler oder im
 Englischen ``Reward Prediction Error'' (RPE) genannt.
 
 Das Experiment in Abb.~\ref{learning_steps} wird nun mit der
-Eq.~\ref{bellit} viele Male mit Zufallswanderungen mit der maximalen
+Formel.~\ref{bellit} viele Male mit Zufallswanderungen mit der maximalen
 Zeit $T$ wiederholt, bis der Fehler $\delta$ im Mittel Null
 ist. Das Endergebnis gibt dann eine Vorhersage der
-Belohnung fuer jedes Q in Abhaengigkeit von $s$ und $a$:
+Belohnung f\"ur jedes Q in Abhängigkeit von $s$ und $a$:
 \begin{equation}
   Q(s,a) = \sum_{t=0}^T \gamma^t r_t
 \end{equation}
@@ -118,24 +118,24 @@ wo $T$ die Gesamtzeit ist die Aufgabe zu erledigen.
 Soweit haben wir nur einen Matrix von Q-Werten aber wie kann diese
 Matrix nun verwendet werden, um schnell alle Belohnungen zu sammeln
 und Bestrafungen zu vermeiden? Einfach indem die Agentin sie immer in
-den Zustand $s$ springt, welches den hoechsten Q-Wert hat. Das nennt
+den Zustand $s$ springt, welches den h\"ochsten Q-Wert hat. Das nennt
 sich dann eine ``Policy'' oder ``Strategie''. Solch eine Strategie
 nennt sich ``gierig'' oder ``greedy'', da sie immer die lokal stärkste
 Belohnung erarbeitet.
 
 Praktisch gesehen, werden normalerweise das Lernen von Q
-(``exploration'') und das Ausfuehren der Strategie (``explotation'')
+(``exploration'') und das Ausführen der Strategie (``explotation'')
 gemischt.
 
 In Deep Q-learning wird $Q(s,a)$ nicht iterativ anhand einer Q-Tabelle
-ausgerechet sondern mit Hilfe eines Deep Neuronal Nets. Dieses Netz
-berechnet dann gleichzeitig alle Q-Werte bezueglich eines
+ausgerechnet sondern mit Hilfe eines Deep Neuronal Nets. Dieses Netz
+berechnet dann gleichzeitig alle Q-Werte bezüglich eines
 Zustandes. Z.B in Abb.~\ref{learning_steps} sitzt die Maus im Zustand
-$s$ und kann 4 Aktionen ausfuehren. Ein Neuronales Netz kann dann die
-Q-Werte fuer $Q(s,\textrm{Nord}), Q(s,\textrm{Sued}),
+$s$ und kann 4 Aktionen ausf\"uhren. Ein Neuronales Netz kann dann die
+Q-Werte f\"ur $Q(s,\textrm{Nord}), Q(s,\textrm{Sued}),
 Q(s,\textrm{West}), Q(s,\textrm{Ost})$ gleichzeitig ausgeben und dann
 kann die Agentin anhand der ``gierigen'' Strategie die Aktion mit dem
-hoechsten Q-Wert ausfuehren lassen.
+h\"ochsten Q-Wert ausf\"uhren lassen.
 
 Wie wird bei deep Q-learning gelernt? Wenn man sich
 Gleichung.~\ref{bellit} ansieht ist Lernen nichts anderes als den
@@ -143,7 +143,7 @@ Fehler $\delta(s,a)$ mit Hilfe von Error-Backpropagation durch das
 Netz zu schicken, was jedes Deep Net erledigen kann,
 z.B. Tensorflow. Weil Deep Nets mit einem grossen Zustandsraum
 klarkommen kann man diese nicht nur mit x/y-Koordinaten am Eingang
-fuettern sondern z.B. einfach die Vogelperspektive des ganzen Gitters
+f\"uttern sondern z.B. einfach die Vogelperspektive des ganzen Gitters
 von Abb.~\ref{state_action} zur Verfügung stellen. Das wurde z.B. bei
 Deep Minds's Atari-game gemacht.
 

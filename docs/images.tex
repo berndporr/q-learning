@@ -28,8 +28,6 @@
 \title{Q-Lernen und ``Tiefes'' Q-Lernen}
 
 
-
-
 \usepackage{xcolor}
 
 \usepackage[latin1]{inputenc}
@@ -114,20 +112,20 @@
   \else\expandafter\vss\fi}%
 \providecommand{\selectlanguage}[1]{}%
 \makeatletter \tracingstats = 1 
-\providecommand{\Mu}{\textrm{M}}
-\providecommand{\Kappa}{\textrm{K}}
-\providecommand{\Epsilon}{\textrm{E}}
-\providecommand{\Tau}{\textrm{T}}
-\providecommand{\Omicron}{\textrm{O}}
-\providecommand{\Nu}{\textrm{N}}
-\providecommand{\omicron}{\textrm{o}}
-\providecommand{\Chi}{\textrm{X}}
-\providecommand{\Alpha}{\textrm{A}}
-\providecommand{\Iota}{\textrm{J}}
-\providecommand{\Rho}{\textrm{R}}
-\providecommand{\Zeta}{\textrm{Z}}
 \providecommand{\Beta}{\textrm{B}}
+\providecommand{\Iota}{\textrm{J}}
+\providecommand{\Nu}{\textrm{N}}
+\providecommand{\Zeta}{\textrm{Z}}
+\providecommand{\Kappa}{\textrm{K}}
+\providecommand{\omicron}{\textrm{o}}
+\providecommand{\Alpha}{\textrm{A}}
+\providecommand{\Tau}{\textrm{T}}
 \providecommand{\Eta}{\textrm{H}}
+\providecommand{\Mu}{\textrm{M}}
+\providecommand{\Epsilon}{\textrm{E}}
+\providecommand{\Chi}{\textrm{X}}
+\providecommand{\Rho}{\textrm{R}}
+\providecommand{\Omicron}{\textrm{O}}
 
 
 \begin{document}
@@ -153,147 +151,147 @@
 % !!! IMAGES START HERE !!!
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline348}%
+\lthtmlinlinemathA{tex2html_wrap_inline355}%
 $ 0.5$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline350}%
+\lthtmlinlinemathA{tex2html_wrap_inline357}%
 $ \alpha = 0.5$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 \stepcounter{section}
 {\newpage\clearpage
-\lthtmlpictureA{tex2html_wrap352}%
+\lthtmlpictureA{tex2html_wrap359}%
 \includegraphics[width=\textwidth]{state_action}%
 \lthtmlpictureZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline357}%
+\lthtmlinlinemathA{tex2html_wrap_inline364}%
 $ s$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline359}%
+\lthtmlinlinemathA{tex2html_wrap_inline366}%
 $ t$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline361}%
+\lthtmlinlinemathA{tex2html_wrap_inline368}%
 $ s_t$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline363}%
+\lthtmlinlinemathA{tex2html_wrap_inline370}%
 $ r$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline365}%
+\lthtmlinlinemathA{tex2html_wrap_inline372}%
 $ r>0$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline367}%
+\lthtmlinlinemathA{tex2html_wrap_inline374}%
 $ r<0$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline369}%
+\lthtmlinlinemathA{tex2html_wrap_inline376}%
 $ r=0$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline371}%
+\lthtmlinlinemathA{tex2html_wrap_inline378}%
 $ a$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline377}%
+\lthtmlinlinemathA{tex2html_wrap_inline384}%
 $ s_{t+1}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlpictureA{tex2html_wrap388}%
+\lthtmlpictureA{tex2html_wrap395}%
 \includegraphics[width=0.75\textwidth]{learning_steps}%
 \lthtmlpictureZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline407}%
+\lthtmlinlinemathA{tex2html_wrap_inline414}%
 $ Q(s,a)$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay415}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay422}%
 $\displaystyle Q(s,a) \leftarrow Q(s,a) + \alpha \underbrace{\left[ r(s) + \gamma \max_{a^\prime} Q(s^\prime,a^\prime) - Q(s,a) \right]}_{\delta(s,a)}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline417}%
+\lthtmlinlinemathA{tex2html_wrap_inline424}%
 $ \alpha$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline419}%
+\lthtmlinlinemathA{tex2html_wrap_inline426}%
 $ 0 < \gamma < 1$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline423}%
+\lthtmlinlinemathA{tex2html_wrap_inline430}%
 $ \gamma = 1$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline435}%
+\lthtmlinlinemathA{tex2html_wrap_inline442}%
 $ \max_{a^\prime} Q(s^\prime,a^\prime)$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline439}%
+\lthtmlinlinemathA{tex2html_wrap_inline446}%
 $ \delta(s,a)$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline441}%
+\lthtmlinlinemathA{tex2html_wrap_inline448}%
 $ T$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline443}%
+\lthtmlinlinemathA{tex2html_wrap_inline450}%
 $ \delta$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay449}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay456}%
 $\displaystyle Q(s,a) = \sum_{t=0}^T \gamma^t r_t$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 \stepcounter{section}
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline460}%
+\lthtmlinlinemathA{tex2html_wrap_inline467}%
 $ Q(s,\textrm{Nord}), Q(s,\textrm{Sued}),
 Q(s,\textrm{West}), Q(s,\textrm{Ost})$%
 \lthtmlindisplaymathZ

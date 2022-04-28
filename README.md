@@ -1,6 +1,6 @@
 # Q-Lernen und tiefes Q-Lernen
 
-Handout (PDF)
+Handout (PDF): 
 
 Handout (HTML)
 

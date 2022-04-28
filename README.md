@@ -2,5 +2,4 @@
 
 Handout (PDF): 
 
-Handout (HTML)
-
+Handout (HTML): https://berndporr.github.io/q-lernen/

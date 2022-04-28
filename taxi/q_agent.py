@@ -20,11 +20,11 @@ class QAgent:
 
     def update_parameters(self, state, action, reward, next_state):
         """"""
-        old_value = self.q_table[state, action]
-        next_max = np.max(self.q_table[next_state])
+        current_q = self.q_table[state, action]
+        next_max_q = np.max(self.q_table[next_state])
 
-        new_value = (1 - self.alpha) * old_value + self.alpha * (reward + self.gamma * next_max)
-        self.q_table[state, action] = new_value
+        new_q = current_q + self.alpha * (reward + self.gamma * next_max_q - current_q)
+        self.q_table[state, action] = new_q
 
     def reset(self):
         """

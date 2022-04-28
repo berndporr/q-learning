@@ -1,2 +1,6 @@
-# q-learning
-Q-learning writeup in German
+# Q-Lernen und tiefes Q-Lernen
+
+Handout (PDF)
+
+Handout (HTML)
+

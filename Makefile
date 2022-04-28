@@ -1,3 +1,3 @@
 all:
-	pdflatex q-learning
-	pdflatex q-learning
+	pdflatex q-lernen
+	pdflatex q-lernen

@@ -133,7 +133,9 @@ Belohnung erarbeitet.
 
 Praktisch gesehen, werden normalerweise das Lernen von Q
 (``exploration'') und das Ausführen der Strategie (``exploitation'')
-gemischt.
+gemischt. Das ``Taxi''-Programm in Python zeigt, wie man es macht
+und auch, wie man openAIs ``Gym'' verwendet:
+\url{https://github.com/berndporr/q-lernen/tree/main/taxi}
 
 \section{Tiefes Q-Lernen}
 Beim tiefen Q-lernen wird $Q(s,a)$ nicht iterativ anhand einer Q-Tabelle
@@ -155,5 +157,8 @@ klarkommen kann man diese nicht nur mit x/y-Koordinaten am Eingang
 füttern sondern z.B. einfach die Vogelperspektive des ganzen Gitters
 von Abb.~\ref{state_action} zur Verfügung stellen. Das wurde z.B. bei
 Deep Minds's Atari-Game gemacht.
+
+Tensorflow und Tiefes Q-Lernen:
+\url{https://www.tensorflow.org/agents/tutorials/0_intro_rl}
 
 \end{document}

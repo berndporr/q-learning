@@ -6,6 +6,10 @@ $key = q/bellit/;
 $external_labels{$key} = "$URL/" . q|q-lernen.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/dqn/;
+$external_labels{$key} = "$URL/" . q|q-lernen.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/learning_steps/;
 $external_labels{$key} = "$URL/" . q|q-lernen.html|; 
 $noresave{$key} = "$nosave";
@@ -27,6 +31,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/bellit/;
 $external_latex_labels{$key} = q|1|; 
+$noresave{$key} = "$nosave";
+
+$key = q/dqn/;
+$external_latex_labels{$key} = q|3|; 
 $noresave{$key} = "$nosave";
 
 $key = q/learning_steps/;

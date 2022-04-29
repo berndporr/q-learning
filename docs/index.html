@@ -53,7 +53,7 @@ lernt ihre Belohnung zu maximieren.
 
 <P>
 
-<DIV class="CENTER"><A ID="state_action"></A><A ID="64"></A>
+<DIV class="CENTER"><A ID="state_action"></A><A ID="73"></A>
 <TABLE>
 <CAPTION class="BOTTOM"><STRONG>Abbildung 1:</STRONG>
 Zustandsraum und Aktionen einer autonomen Agentin (z.B eine Maus),
@@ -62,7 +62,7 @@ Zustandsraum und Aktionen einer autonomen Agentin (z.B eine Maus),
 <TR><TD>
 <DIV class="CENTER">
 <IMG STYLE=""
- SRC="img3.svg"
+ SRC="img5.svg"
  ALT="\includegraphics[width=\textwidth]{state_action}">
 
 </DIV></TD></TR>
@@ -75,44 +75,44 @@ eine solche Agentin (hier eine Maus) bewegt. Abb.&nbsp;<A HREF="#state_action">1
 zeigt den Zustandsraum. In diesem Beispiel ist der Zustandsraum 2D, in
 dem sich die Agentin bewegen kann. Manche Zustände sind durch Wände
 verboten und bei anderen gibt es eine Belohnung (als &ldquo;Käse&rdquo;
-gekennzeichnet). Zustände werden mit <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img4.svg"
+gekennzeichnet). Zustände werden mit <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img6.svg"
  ALT="$s$"></SPAN> gekennzeichnet und wenn sie
-zum Zeitpunkt <SPAN CLASS="MATH"><IMG STYLE="height: 1.57ex; vertical-align: -0.09ex; " SRC="img5.svg"
- ALT="$t$"></SPAN> passieren, dann wird das als <SPAN CLASS="MATH"><IMG STYLE="height: 1.49ex; vertical-align: -0.43ex; " SRC="img6.svg"
+zum Zeitpunkt <SPAN CLASS="MATH"><IMG STYLE="height: 1.57ex; vertical-align: -0.09ex; " SRC="img7.svg"
+ ALT="$t$"></SPAN> passieren, dann wird das als <SPAN CLASS="MATH"><IMG STYLE="height: 1.49ex; vertical-align: -0.43ex; " SRC="img8.svg"
  ALT="$s_t$"></SPAN>
 gekennzeichnet. Jeder Zustand besitzt auch eine skalare
-Belohnungsvariable <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img7.svg"
- ALT="$r$"></SPAN>, die positiv <SPAN CLASS="MATH"><IMG STYLE="height: 1.69ex; vertical-align: -0.15ex; " SRC="img8.svg"
+Belohnungsvariable <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img9.svg"
+ ALT="$r$"></SPAN>, die positiv <SPAN CLASS="MATH"><IMG STYLE="height: 1.69ex; vertical-align: -0.15ex; " SRC="img10.svg"
  ALT="$r&gt;0$"></SPAN> ist, wenn es eine Belohnung gibt
-und negativ <SPAN CLASS="MATH"><IMG STYLE="height: 1.69ex; vertical-align: -0.15ex; " SRC="img9.svg"
+und negativ <SPAN CLASS="MATH"><IMG STYLE="height: 1.69ex; vertical-align: -0.15ex; " SRC="img11.svg"
  ALT="$r&lt;0$"></SPAN>, wenn der Zustand bestraft werden soll. Für alle anderen
-Zustände ist <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.09ex; " SRC="img10.svg"
+Zustände ist <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.09ex; " SRC="img12.svg"
  ALT="$r=0$"></SPAN>.
 
 <P>
-Abb.&nbsp;<A HREF="#state_action">1</A>B zeigt die möglichen Aktionen <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img11.svg"
+Abb.&nbsp;<A HREF="#state_action">1</A>B zeigt die möglichen Aktionen <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img13.svg"
  ALT="$a$"></SPAN>, die die
 Agentin durchführen kann. Eine Aktion bewirkt eine Bewegung von einem
-Zustand <SPAN CLASS="MATH"><IMG STYLE="height: 1.49ex; vertical-align: -0.43ex; " SRC="img6.svg"
- ALT="$s_t$"></SPAN> zum Zeitpunkt <SPAN CLASS="MATH"><IMG STYLE="height: 1.57ex; vertical-align: -0.09ex; " SRC="img5.svg"
- ALT="$t$"></SPAN> zum Zustand <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.59ex; " SRC="img12.svg"
+Zustand <SPAN CLASS="MATH"><IMG STYLE="height: 1.49ex; vertical-align: -0.43ex; " SRC="img8.svg"
+ ALT="$s_t$"></SPAN> zum Zeitpunkt <SPAN CLASS="MATH"><IMG STYLE="height: 1.57ex; vertical-align: -0.09ex; " SRC="img7.svg"
+ ALT="$t$"></SPAN> zum Zustand <SPAN CLASS="MATH"><IMG STYLE="height: 1.64ex; vertical-align: -0.59ex; " SRC="img14.svg"
  ALT="$s_{t+1}$"></SPAN> und evtl gibt
-es eine Belohnung (<SPAN CLASS="MATH"><IMG STYLE="height: 1.69ex; vertical-align: -0.15ex; " SRC="img8.svg"
- ALT="$r&gt;0$"></SPAN>) oder eine Bestrafung (<SPAN CLASS="MATH"><IMG STYLE="height: 1.69ex; vertical-align: -0.15ex; " SRC="img9.svg"
+es eine Belohnung (<SPAN CLASS="MATH"><IMG STYLE="height: 1.69ex; vertical-align: -0.15ex; " SRC="img10.svg"
+ ALT="$r&gt;0$"></SPAN>) oder eine Bestrafung (<SPAN CLASS="MATH"><IMG STYLE="height: 1.69ex; vertical-align: -0.15ex; " SRC="img11.svg"
  ALT="$r&lt;0$"></SPAN>).
 
 <P>
 Abb.&nbsp;<A HREF="#state_action">1</A>C illustriert, wie man die Interaktion zwischen
 der autonomen Agentin und Umwelt als geschlossenes System interpretieren. Jede
-Aktion <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img11.svg"
- ALT="$a$"></SPAN> der Agentin erzeugt einen neuen Zustand <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img4.svg"
+Aktion <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img13.svg"
+ ALT="$a$"></SPAN> der Agentin erzeugt einen neuen Zustand <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img6.svg"
  ALT="$s$"></SPAN> und
-gegebenenfalls auch eine Belohnung <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img7.svg"
+gegebenenfalls auch eine Belohnung <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img9.svg"
  ALT="$r$"></SPAN>.
 
 <P>
 
-<DIV class="CENTER"><A ID="learning_steps"></A><A ID="66"></A>
+<DIV class="CENTER"><A ID="learning_steps"></A><A ID="75"></A>
 <TABLE>
 <CAPTION class="BOTTOM"><STRONG>Abbildung 2:</STRONG>
 Lernschritte von Q-learning. A) Die Agentin befindet
@@ -128,7 +128,7 @@ Lernschritte von Q-learning. A) Die Agentin befindet
 <TR><TD>
 <DIV class="CENTER">
 <IMG STYLE=""
- SRC="img13.svg"
+ SRC="img15.svg"
  ALT="\includegraphics[width=0.75\textwidth]{learning_steps}">
 
 </DIV></TD></TR>
@@ -137,18 +137,18 @@ Lernschritte von Q-learning. A) Die Agentin befindet
 
 <P>
 Die Frage stellt sich nun, wie die Agentin von jeder beliebigen Stelle
-<SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img4.svg"
- ALT="$s$"></SPAN> die Belohnungen findet. Das wird erreicht, indem jede Aktion <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img11.svg"
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img6.svg"
+ ALT="$s$"></SPAN> die Belohnungen findet. Das wird erreicht, indem jede Aktion <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img13.svg"
  ALT="$a$"></SPAN>
-bezüglich eines Zustandes <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img4.svg"
+bezüglich eines Zustandes <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img6.svg"
  ALT="$s$"></SPAN> eine Hilfsvariable erhält, die wir
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img14.svg"
- ALT="$Q(s,a)$"></SPAN> nennen (siehe Abb.&nbsp;<A HREF="#learning_steps">2</A>A). Jede Aktion <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img11.svg"
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img16.svg"
+ ALT="$Q(s,a)$"></SPAN> nennen (siehe Abb.&nbsp;<A HREF="#learning_steps">2</A>A). Jede Aktion <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img13.svg"
  ALT="$a$"></SPAN> in einem
-Zustand <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img4.svg"
+Zustand <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img6.svg"
  ALT="$s$"></SPAN> erhält damit verschiedene Q-Werte. Das Ziel ist es, den Aktionen
 einen hohen Q-Wert zu geben, die maximale Belohnung versprechen. In diesem
-Beispiel erhält jeder Zustand <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img4.svg"
+Beispiel erhält jeder Zustand <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img6.svg"
  ALT="$s$"></SPAN> vier Q-Werte (Nord, West, Ost
 und Süd). Anfänglich sind alle Q-Werte null werden dann mit Hilfe der iterativen Bellmangleichung bestimmt:
 <P></P>
@@ -159,17 +159,17 @@ Q(s,a) \leftarrow Q(s,a) + \alpha \underbrace{\left[ r(s) + \gamma \max_{a^\prim
  -->
 <TABLE CLASS="equation" >
 <TR>
-<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.89ex; vertical-align: -5.24ex; " SRC="img15.svg"
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.89ex; vertical-align: -5.24ex; " SRC="img17.svg"
  ALT="$\displaystyle Q(s,a) \leftarrow Q(s,a) + \alpha \underbrace{\left[ r(s) + \gamma \max_{a^\prime} Q(s^\prime,a^\prime) - Q(s,a) \right]}_{\delta(s,a)}$"></SPAN></TD>
 <TD  CLASS="eqno" style="text-align:right">
 (<SPAN CLASS="arabic">1</SPAN>)</TD></TR>
 </TABLE></DIV>
 <P></P>
-wo <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img16.svg"
+wo <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img18.svg"
  ALT="$\alpha$"></SPAN> die Lernrate ist und <!-- MATH
  $0 < \gamma < 1$
  -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.07ex; vertical-align: -0.53ex; " SRC="img17.svg"
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.07ex; vertical-align: -0.53ex; " SRC="img19.svg"
  ALT="$0 &lt; \gamma &lt; 1$"></SPAN> der &ldquo;discount
 Factor&rdquo; der zukünftige Belohnungen abwertet. Für die Beispiele hier
 nehmen wir einfach an, dass <!-- MATH
@@ -179,13 +179,13 @@ nehmen wir einfach an, dass <!-- MATH
  ALT="$\alpha = 0.5$"></SPAN> und <!-- MATH
  $\gamma = 1$
  -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.07ex; vertical-align: -0.53ex; " SRC="img18.svg"
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.07ex; vertical-align: -0.53ex; " SRC="img20.svg"
  ALT="$\gamma = 1$"></SPAN> ist.
 
 <P>
 Die Q-Werte werden nun iterativ gelernt, wobei die Agentin
-Zufallsaktionen <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img11.svg"
- ALT="$a$"></SPAN> durchführt und dann <SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img14.svg"
+Zufallsaktionen <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img13.svg"
+ ALT="$a$"></SPAN> durchführt und dann <SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img16.svg"
  ALT="$Q(s,a)$"></SPAN> aktualisiert
 wird. Die Agentin kann immer einen Schritt voraussehen, also quasi
 über die Schwelle zu einem anderen Zustand gucken. Das wird in Q-Lernen
@@ -203,7 +203,7 @@ Q-Wert von <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.09e
 <P>
 Der entscheidende Trick ist aber nun, wenn bei der nächsten
 Zufallswanderung die simulierte Maus einen Schritt vor der primären
-Belohnung steht und <SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img14.svg"
+Belohnung steht und <SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img16.svg"
  ALT="$Q(s,a)$"></SPAN> nicht mehr überall null
 ist. Abb.&nbsp;<A HREF="#learning_steps">2</A>B zeigt nun die Agentin einen Schritt
 vor der Belohnung. Die Maus schaut also nun in die verschiedenen
@@ -211,14 +211,14 @@ Felder um sich herum und bestimmt dort den maximalen Q-Wert
 <!-- MATH
  $\max_{a^\prime} Q(s^\prime,a^\prime)$
  -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img19.svg"
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img21.svg"
  ALT="$\max_{a^\prime} Q(s^\prime,a^\prime)$"></SPAN>, vergleicht den mit dem
-aktuellen Q-Wert <SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img14.svg"
+aktuellen Q-Wert <SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img16.svg"
  ALT="$Q(s,a)$"></SPAN> und korrigiert dann den aktuellen Q-Wert
 anhand der Lernrate. Aus diesem Grunde wird der Term <!-- MATH
  $\delta(s,a)$
  -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img20.svg"
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img22.svg"
  ALT="$\delta(s,a)$"></SPAN>
 auch Vorhersagefehler oder im Englischen &ldquo;Reward Prediction Error&rdquo;
 (RPE) genannt.
@@ -226,13 +226,13 @@ auch Vorhersagefehler oder im Englischen &ldquo;Reward Prediction Error&rdquo;
 <P>
 Das Experiment in Abb.&nbsp;<A HREF="#learning_steps">2</A> wird nun mit der
 Formel.&nbsp;<A HREF="#bellit">1</A> viele Male mit Zufallswanderungen bei einer
-maximalen Laufzeit <SPAN CLASS="MATH"><IMG STYLE="height: 1.72ex; vertical-align: -0.09ex; " SRC="img21.svg"
- ALT="$T$"></SPAN> wiederholt, bis der Fehler <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.09ex; " SRC="img22.svg"
- ALT="$\delta$"></SPAN> im Mittel
+maximalen Laufzeit <SPAN CLASS="MATH"><IMG STYLE="height: 1.72ex; vertical-align: -0.09ex; " SRC="img23.svg"
+ ALT="$T$"></SPAN> wiederholt, bis der Fehler <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.09ex; " SRC="img4.svg"
+ ALT="$\delta $"></SPAN> im Mittel
 Null ist also die Q-Werte sich nicht mehr ändern. Das Endergebnis gibt
-dann eine Vorhersage der gesamten Belohnung in Abhängigkeit von <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img4.svg"
+dann eine Vorhersage der gesamten Belohnung in Abhängigkeit von <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img6.svg"
  ALT="$s$"></SPAN>
-und <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img11.svg"
+und <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img13.svg"
  ALT="$a$"></SPAN>:
 <P></P>
 <DIV CLASS="mathdisplay"><!-- MATH
@@ -242,20 +242,20 @@ Q(s,a) = \sum_{t=0}^T \gamma^t r_t
  -->
 <TABLE CLASS="equation" >
 <TR>
-<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.04ex; vertical-align: -2.91ex; " SRC="img23.svg"
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.04ex; vertical-align: -2.91ex; " SRC="img24.svg"
  ALT="$\displaystyle Q(s,a) = \sum_{t=0}^T \gamma^t r_t$"></SPAN></TD>
 <TD  CLASS="eqno" style="text-align:right">
 (<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
 </TABLE></DIV>
 <P></P>
-wo <SPAN CLASS="MATH"><IMG STYLE="height: 1.72ex; vertical-align: -0.09ex; " SRC="img21.svg"
+wo <SPAN CLASS="MATH"><IMG STYLE="height: 1.72ex; vertical-align: -0.09ex; " SRC="img23.svg"
  ALT="$T$"></SPAN> die Gesamtzeit ist, die Aufgabe zu erledigen.
 
 <P>
 Soweit haben wir nur eine Matrix von Q-Werten aber wie kann diese
 Matrix nun verwendet werden, um schnell alle Belohnungen zu sammeln
 und Bestrafungen zu vermeiden? Einfach indem die Agentin sie immer in
-den Zustand <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img4.svg"
+den Zustand <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img6.svg"
  ALT="$s$"></SPAN> springt, welches den höchsten Q-Wert hat. Das nennt
 sich eine &ldquo;Policy&rdquo; oder &ldquo;Strategie&rdquo;. Solch eine Strategie
 nennt sich &ldquo;gierig&rdquo; oder &ldquo;greedy&rdquo;, da sie immer die lokal stärkste
@@ -273,41 +273,65 @@ und auch, wie man openAIs &ldquo;Gym&rdquo; verwendet:
 <H1><A ID="SECTION00020000000000000000">
 Tiefes Q-Lernen</A>
 </H1>
-Beim tiefen Q-lernen wird <SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img14.svg"
- ALT="$Q(s,a)$"></SPAN> nicht iterativ anhand einer Q-Tabelle
-ausgerechnet sondern mit Hilfe eines Deep Neuronal Nets. Dieses Netz
-berechnet dann gleichzeitig alle Q-Werte bezüglich eines
-Zustandes. Z.B in Abb.&nbsp;<A HREF="#learning_steps">2</A> sitzt die Maus im Zustand
-<SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img4.svg"
- ALT="$s$"></SPAN> und kann 4 Aktionen ausführen. Ein Neuronales Netz kann dann die
-Q-Werte für <!-- MATH
+
+<DIV class="CENTER"><A ID="dqn"></A><A ID="78"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Abbildung 3:</STRONG>
+Tiefes Q-Lernen: Die Q-Werte werden von einem tiefen
+  Neuronalen Netz (NN) ausgerechnet. Dessen Ausgang wird dann mit den
+  erwarteten Q-Werten verglichen. Nur der Vergleicher für <!-- MATH
+ $Q(s,\textrm{Ost})$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img3.svg"
+ ALT="$Q(s,\textrm {Ost})$"></SPAN>
+  wird gezeigt aber es sind vier Vergleichsoperationen, die vier
+  Fehlersignale <SPAN CLASS="MATH"><IMG STYLE="height: 1.74ex; vertical-align: -0.09ex; " SRC="img4.svg"
+ ALT="$\delta $"></SPAN> erzeugen.
+</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="img25.svg"
+ ALT="\includegraphics[width=\textwidth]{dqn}">
+
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+Beim tiefen Q-lernen wird <SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img16.svg"
+ ALT="$Q(s,a)$"></SPAN> nicht iterativ anhand einer
+Q-Tabelle ausgerechnet sondern mit Hilfe eines Deep Neuronal Nets
+(Abb&nbsp;<A HREF="#dqn">3</A>). Dieses Netz berechnet gleichzeitig alle Q-Werte
+bezüglich eines Zustandes. Z.B in Abb.&nbsp;<A HREF="#learning_steps">2</A> sitzt die
+Maus im Zustand <SPAN CLASS="MATH"><IMG STYLE="height: 1.15ex; vertical-align: -0.09ex; " SRC="img6.svg"
+ ALT="$s$"></SPAN> und kann 4 Aktionen ausführen. Ein Neuronales Netz
+kann dann die Q-Werte für <!-- MATH
  $Q(s,\textrm{Nord}), Q(s,\textrm{Sued}),
 Q(s,\textrm{West}), Q(s,\textrm{Ost})$
  -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img24.svg"
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img26.svg"
  ALT="$Q(s,\textrm{Nord}), Q(s,\textrm{Sued}),
 Q(s,\textrm{West}), Q(s,\textrm{Ost})$"></SPAN> gleichzeitig ausgeben und dann
 kann die Agentin anhand der &ldquo;gierigen&rdquo; Strategie die Aktion mit dem
 höchsten Q-Wert ausführen lassen.
 
 <P>
-Wie wird bei deep Q-learning gelernt? Wenn man sich
-Gl.&nbsp;<A HREF="#bellit">1</A> ansieht ist Lernen nichts anderes als den
-Fehler <!-- MATH
+Wie wird bei deep Q-learning gelernt? Wenn man sich Gl.&nbsp;<A HREF="#bellit">1</A>
+ansieht ist Lernen nichts anderes als die Fehler <!-- MATH
  $\delta(s,a)$
  -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img20.svg"
- ALT="$\delta(s,a)$"></SPAN> mit Hilfe von Error-Backpropagation durch das
-Netz zu schicken, was jedes Deep Net erledigen kann,
-z.B. Tensorflow. Weil Deep Nets mit einem grossen Zustandsraum
-klarkommen kann man diese nicht nur mit x/y-Koordinaten am Eingang
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.43ex; vertical-align: -0.66ex; " SRC="img22.svg"
+ ALT="$\delta(s,a)$"></SPAN> mit
+Hilfe von Error-Backpropagation durch das Netz zu schicken
+(Abb.&nbsp;<A HREF="#learning_steps">2</A>), was jedes tiefe Neuronale Netz erledigen kann,
+z.B. Tensorflow. Weil Deep Nets mit einem großen Zustandsraum
+klarkommen, kann man diese nicht nur mit x/y-Koordinaten am Eingang
 füttern sondern z.B. einfach die Vogelperspektive des ganzen Gitters
 von Abb.&nbsp;<A HREF="#state_action">1</A> zur Verfügung stellen. Das wurde z.B. bei
 Deep Minds's Atari-Game gemacht.
 
 <P>
 Tensorflow und tiefes Q-Lernen:
-<kbd><A ID="tex2html5"
+<kbd><A ID="tex2html6"
   HREF="https://www.tensorflow.org/agents/tutorials/0_intro_rl">https://www.tensorflow.org/agents/tutorials/0_intro_rl</A></kbd>
 <P>
 
@@ -327,11 +351,11 @@ The translation was initiated on 2022-04-29
 <A ID="CHILD_LINKS"></A>
 
 <UL CLASS="ChildLinks">
-<LI><A ID="tex2html6"
-  HREF="q-lernen.html#SECTION00010000000000000000">Traditionelles Q-Lernen</A>
 <LI><A ID="tex2html7"
-  HREF="q-lernen.html#SECTION00020000000000000000">Tiefes Q-Lernen</A>
+  HREF="q-lernen.html#SECTION00010000000000000000">Traditionelles Q-Lernen</A>
 <LI><A ID="tex2html8"
+  HREF="q-lernen.html#SECTION00020000000000000000">Tiefes Q-Lernen</A>
+<LI><A ID="tex2html9"
   HREF="q-lernen.html#SECTION00030000000000000000">&Uuml;ber dieses Dokument ...</A>
 </UL>
 <!--End of Table of Child-Links-->

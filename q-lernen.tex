@@ -138,22 +138,33 @@ und auch, wie man openAIs ``Gym'' verwendet:
 \url{https://github.com/berndporr/q-lernen/tree/main/taxi}
 
 \section{Tiefes Q-Lernen}
-Beim tiefen Q-lernen wird $Q(s,a)$ nicht iterativ anhand einer Q-Tabelle
-ausgerechnet sondern mit Hilfe eines Deep Neuronal Nets. Dieses Netz
-berechnet dann gleichzeitig alle Q-Werte bezüglich eines
-Zustandes. Z.B in Abb.~\ref{learning_steps} sitzt die Maus im Zustand
-$s$ und kann 4 Aktionen ausführen. Ein Neuronales Netz kann dann die
-Q-Werte für $Q(s,\textrm{Nord}), Q(s,\textrm{Sued}),
+\begin{figure}[!hbt]
+\begin{center}
+\mbox{\includegraphics[width=\textwidth]{dqn}}
+\end{center}
+\caption{Tiefes Q-Lernen: Die Q-Werte werden von einem tiefen
+  Neuronalen Netz (NN) ausgerechnet. Dessen Ausgang wird dann mit den
+  erwarteten Q-Werten verglichen. Nur der Vergleicher für $Q(s,\textrm{Ost})$
+  wird gezeigt aber es sind vier Vergleichsoperationen, die vier
+  Fehlersignale $\delta$ erzeugen.
+\label{dqn}}
+\end{figure}
+Beim tiefen Q-lernen wird $Q(s,a)$ nicht iterativ anhand einer
+Q-Tabelle ausgerechnet sondern mit Hilfe eines Deep Neuronal Nets
+(Abb~\ref{dqn}). Dieses Netz berechnet gleichzeitig alle Q-Werte
+bezüglich eines Zustandes. Z.B in Abb.~\ref{learning_steps} sitzt die
+Maus im Zustand $s$ und kann 4 Aktionen ausführen. Ein Neuronales Netz
+kann dann die Q-Werte für $Q(s,\textrm{Nord}), Q(s,\textrm{Sued}),
 Q(s,\textrm{West}), Q(s,\textrm{Ost})$ gleichzeitig ausgeben und dann
 kann die Agentin anhand der ``gierigen'' Strategie die Aktion mit dem
 höchsten Q-Wert ausführen lassen.
 
-Wie wird bei deep Q-learning gelernt? Wenn man sich
-Gl.~\ref{bellit} ansieht ist Lernen nichts anderes als den
-Fehler $\delta(s,a)$ mit Hilfe von Error-Backpropagation durch das
-Netz zu schicken, was jedes Deep Net erledigen kann,
-z.B. Tensorflow. Weil Deep Nets mit einem grossen Zustandsraum
-klarkommen kann man diese nicht nur mit x/y-Koordinaten am Eingang
+Wie wird bei deep Q-learning gelernt? Wenn man sich Gl.~\ref{bellit}
+ansieht ist Lernen nichts anderes als die Fehler $\delta(s,a)$ mit
+Hilfe von Error-Backpropagation durch das Netz zu schicken
+(Abb.~\ref{learning_steps}), was jedes tiefe Neuronale Netz erledigen kann,
+z.B. Tensorflow. Weil Deep Nets mit einem großen Zustandsraum
+klarkommen, kann man diese nicht nur mit x/y-Koordinaten am Eingang
 füttern sondern z.B. einfach die Vogelperspektive des ganzen Gitters
 von Abb.~\ref{state_action} zur Verfügung stellen. Das wurde z.B. bei
 Deep Minds's Atari-Game gemacht.

@@ -6,6 +6,10 @@ $key = q/bellit/;
 $ref_files{$key} = "$dir".q|q-lernen.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/dqn/;
+$ref_files{$key} = "$dir".q|q-lernen.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/learning_steps/;
 $ref_files{$key} = "$dir".q|q-lernen.html|; 
 $noresave{$key} = "$nosave";
